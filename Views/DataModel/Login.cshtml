@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Content";
+}
+
+<h1>Login</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-controller="DataModel" asp-action="Checking">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Name" />
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password" /><br />
+            <button type="submit" class="form-control btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>
+

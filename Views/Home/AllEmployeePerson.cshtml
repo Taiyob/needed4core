@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebApplication1.Models.Person>
+@{
+    ViewData["Title"] = "AllEmployeePerson";
+}
+
+<h1>All Employee Person</h1>
+<h2>Data pass with Model</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Age</td>
+                        <td>@item.Phone</td>
+                        <td>@item.Country</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

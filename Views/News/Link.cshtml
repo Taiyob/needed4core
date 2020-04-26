@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Linq";
+    Layout = "_Routes";
+}
+
+<h1>Linq</h1>
+
+@if (ViewBag.msg != null)
+{
+    foreach (var item in ViewBag.msg)
+    {
+        <h3 class="alert alert-primary">@item</h3>
+    }
+}
+

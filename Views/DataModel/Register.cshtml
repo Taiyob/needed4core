@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Content";
+}
+
+<h1>Register</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-controller="DataModel" asp-action="Check">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Name" />
+            <label>Father's Name</label>
+            <input type="text" class="form-control" name="fname" placeholder="Father Name" /><br />
+            <label>Present Address</label>
+            <input type="text" class="form-control" name="present" placeholder="Present Address" /><br />
+            <label>Parmanent Address</label>
+            <input type="text" class="form-control" name="parmanent" placeholder="Parmanent Address" /><br />
+            <label>Phone</label>
+            <input type="text" class="form-control" name="phone" placeholder="Phone" /><br />
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" placeholder="Email Address" /><br />
+            <button type="submit" class="form-control btn btn-success">Register</button>
+        </form>
+    </div>
+</div>
+

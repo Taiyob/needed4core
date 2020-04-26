@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "AdvanceOne";
+    Layout = "_LinqAdvance";
+}
+
+<h1>Advance One</h1>
+
+@if (ViewBag.food != null)
+{
+    foreach (var item in ViewBag.food)
+    {
+        <h3 class="alert alert-info">@item</h3>
+    }
+}
+

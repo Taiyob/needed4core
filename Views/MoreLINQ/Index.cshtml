@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LinqMore";
+}
+
+<h1>More Linq Index</h1>
+
+@if (ViewBag.data != null)
+{
+    foreach (var item in ViewBag.data)
+    {
+        <h3 class="alert alert-info">@item</h3>
+    }
+}

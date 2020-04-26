@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplication1.Models.Novice>
+@{
+    ViewData["Title"] = "ExampleFive";
+    Layout = "_Linq";
+}
+
+<h1>Example Five</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="LINQ" asp-action="ExampleFive" method="post" class="form-inline">
+            <hr />
+            <label>Search</label>
+            <input type="text" name="usersearch" placeholder="Search" value="" class="form-control" />  &nbsp;
+            <button type="submit" name="submit" class="btn btn-success form-control">search</button>
+            <input type="checkbox" name="chk" value="1" />Exact Search
+            <hr />
+        </form>
+    </div>
+</div>
+<br />
+@if (Model != null)
+{
+    <table class="table table-responsive border table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Depertment</th>
+                <th>Session</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Depertment</td>
+                    <td>@item.AcademicSession</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

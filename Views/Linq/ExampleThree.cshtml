@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "ExampleThree";
+    Layout = "_Linq";
+}
+
+<h1>ExampleThree</h1>
+<h2 class="text-danger">@ViewBag.msg</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="LINQ" asp-action="ExampleThree" method="post" class="form-inline">
+            <label>Search</label>
+            <input type="text" name="usertxt" id="usertxt" placeholder="Search your number" value="@ViewBag.show" class="form-control" />  &nbsp;
+            <button type="submit" name="submit" class="btn btn-success form-control">search</button>&nbsp;
+            <button id="btnclear" class="btn btn-warning">clear</button>
+            <span><b>Total @ViewBag.count records found</b></span>
+        </form>
+    </div>
+</div>
+
+@if (ViewBag.courses != null)
+{
+    foreach (var item in ViewBag.courses)
+    {
+        <h3 class="alert alert-primary">@item</h3>
+    }
+}
+
+@section Scripts{ 
+    <script>
+        $(document).ready(function () {
+            $("#btnclear").on('click', function () {
+                $("#usertxt").val('');
+            });
+        });
+    </script>
+}

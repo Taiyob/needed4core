@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var v = "Hello, are you ready to start with me???";
+    var folder = System.IO.Directory.GetCurrentDirectory();// This is the system to get the directory path(Your project root folder).
+    var files = System.IO.Directory.GetFiles(folder);// Same as, this is the system to get files in a directory.
+    var anotherFile = System.IO.Directory.GetFiles(@"D:\");
+}
+
+    <div class="row">
+        <div class="text-center col-md-6">
+            <h1 id="title" class="display-4">Welcome</h1>
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>
+        <div class="col-md-6">
+            <h1>Starting C# with MVC Core.</h1>
+            <p>@v</p>
+            <h5>@folder</h5>
+            @foreach (var f in files)
+            {
+                <h5 class="text-primary">@f</h5>
+            }
+            @foreach (var a in anotherFile)
+            {
+                <h5 class="text-success">@a</h5>
+            }
+            <button id="fadein" class="btn btn-success">FadeIn</button> <br /><br />
+            <button id="fadeout" class="btn btn-success">FadeOut</button> <br /><br />
+
+            <select id="runtime" class="form-control">
+                <option value="5000">5sec</option>
+                <option value="10000">10sec</option>
+                <option value="8000">8sec</option>
+                <option value="9000">9sec</option>
+                <option value="20000">20sec</option>
+            </select>
+            <br /><br />
+            <input type="number" id="num" class="form-control">
+        </div>
+    </div>
+
+
+
+@section Scripts{ 
+    <script>
+        $(document).ready(function () {
+            //$('#title').fadeOut(7000);
+            $('#fadein').click(function () {
+                //alert('Clicked');
+                var rt = parseInt($('#runtime option:selected').val());
+                $('#title').hide();
+                $('#title').fadeIn(rt);
+            });
+            $('#fadeout').click(function () {
+                var rt = parseInt($('#num').val());
+                $('#title').show();
+                $('#title').fadeOut(rt);
+            });
+        });
+    </script>
+}

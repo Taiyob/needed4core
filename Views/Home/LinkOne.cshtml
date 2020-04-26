@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "LinkOne";
+}
+
+<h1>LinkOne @ViewBag.txt</h1>
+@foreach (var item in ViewBag.arr)
+{
+    <p class="text-primary">@item</p>
+}
+@foreach (var item in ViewBag.t)
+{
+    <p class="text-dark">@item</p>
+}
+

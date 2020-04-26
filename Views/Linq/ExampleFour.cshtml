@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "ExampleFour";
+    Layout = "_Linq";
+}
+
+<h1>Example Four</h1>
+
+@if (ViewBag.data != null)
+{
+    foreach (var item in ViewBag.data)
+    {
+        <h3 class="alert alert-info">@item.Id @item.Name @item.Depertment @item.AcademicSession</h3>
+    }
+}
+

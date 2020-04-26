@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "MethodTestOne";
+    Layout = "_Sidebar";
+}
+
+<h1>Method Test One: <span class="alert alert-info" style="font-size:12px;">@ViewBag.passingTemp</span></h1>
+
+@if (ViewBag.things != null)
+{
+    <h3 class="alert alert-primary">@ViewBag.things</h3>
+}
+
+@if (ViewBag.tempexten != null) {
+    <h4 class="alert alert-info">@ViewBag.tempexten.Id</h4>
+    <h4 class="alert alert-info">@ViewBag.tempexten.Name</h4>
+    <h4 class="alert alert-info">@ViewBag.tempexten.Age</h4>
+    <h4 class="alert alert-info">@ViewBag.tempexten.Phone</h4>
+    <h4 class="alert alert-info">@ViewBag.tempexten.Country</h4>
+}
+

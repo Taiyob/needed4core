@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Linq";
+}
+
+<h1>LINQ Index</h1>
+<div class="row">
+    <div class="col-md-4">
+        <a href="/LINQ/Example">Example</a><br />
+        <a href="/LINQ/ExampleOne">ExampleOne</a><br />
+        <a href="/LINQ/ExampleTwo">ExampleTwo</a><br />
+        <a href="/LINQ/ExampleThree">ExampleThree</a><br />
+        <a href="/LINQ/ExampleFour">ExampleFour</a>
+    </div>
+</div>
+
+@if(ViewBag.number != null)
+{
+    foreach (var item in ViewBag.number)
+    {
+        <h3 class="alert alert-info">@item</h3>
+    }
+}
+

@@ -1,0 +1,36 @@
+﻿@using WebApplication1.Models
+@{
+    ViewData["Title"] = "ViewDataList";
+    List<FileDetail> fd = (List<FileDetail>)ViewData["data"];
+}
+
+<h1>View Data List</h1>
+<h2>Data pass with view data</h2>
+<div class="row">
+    <div class="col-md-12">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Extension</th>
+                    <th>Path</th>
+                    @*<th>Size</th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in fd)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Extension</td>
+                        @*<td>@item.Size</td>*@
+                        <td>@item.Path</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "ModelDataList";
+}
+
+<h1>Model Data List</h1>
+<h2>Data pass with model</h2>
+@foreach (var item in Model)        
+{
+    <h2 class="alert alert-light">@item</h2>
+}
+

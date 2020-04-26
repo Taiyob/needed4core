@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Checking";
+    Layout = "_Content";
+}
+
+<h1>Checking</h1>
+
+@if (ViewBag.msg != null)
+{
+    if (ViewBag.color == 2) { 
+        <h3 id="msg" class="alert alert-success">@ViewBag.msg</h3>
+    }
+    else {
+        <h3 id="msg" class="alert alert-danger">@ViewBag.msg</h3>
+    }
+}
+
+@section Scripts{ 
+   <script>
+       $(document).ready(function () {
+           $('#msg').fadeOut(3000);
+       });
+   </script>
+}
+
